@@ -1,0 +1,120 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 40px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo h2 {
+    font-family: Arial, sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.logo .orange-text {
+    color: orange;
+}
+
+/* Search Bar Styles */
+.search-bar {
+    display: flex;
+    flex: 1; /* Push to occupy space between logo and nav */
+    justify-content: center;
+    margin: 0 20px;
+}
+
+.search-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 300px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    background-color: #fff;
+}
+
+.search-container i {
+    position: absolute;
+    left: 10px;
+    color: #aaa;
+    font-size: 16px;
+}
+
+.search-container input {
+    width: 100%;
+    padding: 10px 10px 10px 35px; /* Space for the icon */
+    border: none;
+    border-radius: 20px;
+    font-size: 14px;
+    outline: none;
+    box-shadow: none;
+}
+
+.search-container input::placeholder {
+    color: #aaa;
+    font-style: italic;
+}
+
+/* Navigation Menu Styles */
+nav ul {
+    display: flex;
+    list-style: none;
+    width: 40%;
+    margin-right: 120px;
+}
+
+nav ul li {
+    margin-left: 20px;
+
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: orange;
+}
+
+/* Cart Icon Styles */
+.cart {
+    position: relative;
+    font-size: 20px;
+    color: #333;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.cart:hover {
+    color: orange;
+}
+
+/* Cart Count Styles */
+.cart-count {
+    position: absolute;
+    bottom: -5px;
+    left: -10px;
+    background-color: orange;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
