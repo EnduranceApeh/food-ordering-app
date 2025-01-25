@@ -1,0 +1,81 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+}
+.menu {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: repeat(5, 1fr); 
+  grid-auto-rows: minmax(200px, auto);
+  justify-content: center; 
+  align-items: start; 
+  padding: 20px;
+}
+
+.menu-card {
+  border: 2px solid #ddd; 
+  border-radius: 12px;
+  width: 100%; 
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+
+  .menu-card div {
+    position: relative;
+  }
+
+  .menu-card-img {
+    width: 100%; 
+    height: 150px;
+    object-fit: cover; 
+    border-bottom: 2px solid #ddd;
+  }
+
+  .add-to-cart-icon {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background-color: orange;
+    color: white;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+  }
+
+  .add-to-cart-icon i {
+    font-size: 16px;
+  }
+
+  .menu-card div:nth-child(2) {
+    padding: 15px;
+  }
+
+  .menu-card .name {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0 0 5px;
+    color: #333;
+    text-decoration: none;
+  }
+
+  .menu-card .price {
+    font-size: 14px;
+    color: #888;
+    margin: 0;
+  }
+
+  .menu-card .name:hover {
+    color: orange;
+    text-decoration: underline;
+  }
