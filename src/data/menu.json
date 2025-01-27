@@ -31,7 +31,7 @@
             },
             {
                 "id": "6",
-                "image": "/public/images/food/amala-ewedu-stew.jpg",
+                "image": "/public/images/food/amala-and-ewedu.jpg",
                 "name": "Amala, Ewedu and Stew",
                 "description": "Yam flour meal served with jute leaves soup and a savory tomato-based stew.",
                 "price": "5.00"
@@ -45,14 +45,14 @@
             },
             {
                 "id": "8",
-                "image": "/public/images/food/fried-plantain.jpg",
+                "image": "/public/images/food/friedPlantain.jpg",
                 "name": "Fried Plantain",
                 "description": "Sweet and crispy fried plantain slices, perfect as a snack or side dish.",
                 "price": "2.00"
             },
             {
                 "id": "9",
-                "image": "/public/images/food/spaghetti.jpg",
+                "image": "/public/images/food/spegatti.jpg",
                 "name": "Spaghetti",
                 "description": "Well-seasoned pasta served with a savory tomato sauce.",
                 "price": "3.00"
@@ -66,7 +66,7 @@
             },
             {
                 "id": "11",
-                "image": "public/images/food/jollofrice-chicken-plantain.jpg",
+                "image": "/public/images/food/jollofrice-chicken-plantain.jpg",
                 "name": "Jollof Rice, Chicken, and Plantain",
                 "description": "A delicious mix of jollof rice, tender chicken, and fried plantain slices.",
                 "price": "5.50"
@@ -117,7 +117,7 @@
             },
             {
                 "id": "18",
-                "image": "/public/images/drinks/strawberry-juice.jpg",
+                "image": "/public/images/drinks/strewberry-juice.jpg",
                 "name": "Strawberry Juice",
                 "description": "Sweet and tangy strawberry-flavored juice.",
                 "price": "2.50"

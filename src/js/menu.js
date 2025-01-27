@@ -1,43 +1,51 @@
+import { addTocart, cartQuantity } from "../data/cart.js";
+import { fetchData } from "./main.js";
 
-fetch('/src/data/menu.json')
-    .then((response) => {
-        if(!response.ok){
-            throw new Error(`Failed to load ${file}`);
-        }
-        return response.json()
-    })
-    .then((data) => {
-        const menu = data.menu;
-        displayMenu(menu)
-    })
-    .catch((error) => console.log(error))
+let menu = {};
+const url = '/src/data/menu.json';
 
+// Call fetchData to initialize the process
 function displayMenu(menu) {
     let html = '';
     Object.keys(menu).forEach(category => {
         console.log(`Category: ${category}`);
 
         menu[category].forEach(item => {
-          html += `
+            html += `
           <div class="menu-card">
           <div>
               <img class="menu-card-img" src="${item.image}" alt="">
-              <span class="add-to-cart-icon"><i class="fa-solid fa-plus"></i></span>
+              <span class="add-to-cart-icon js-add-to-cart-icon" data-item-id="${item.id}"><i class="fa-solid fa-plus"></i></span>
           </div>
           <div>
               <a href="#">
                   <p class="name">${item.name}</p>
               </a>
               <p class="price">${item.price}</p>
-
           </div>
           </div>
-          `
+          `;
         });
-        console.log(html)
-        
-      });
-
-      document.querySelector('.js-menu').innerHTML = html
-      
+    });
+    // Add the generated HTML to the menu container
+    document.querySelector('.js-menu').innerHTML = html;
+    // Log the menu to verify
+    console.log(`Rendered menu:`, menu);
+    // Add to cart functionality
+    document.querySelectorAll('.js-add-to-cart-icon').forEach((button) => {
+        button.addEventListener('click', () => {
+            const itemId = button.dataset.itemId;
+            addTocart(itemId);
+            document.querySelector('.js-cart-count').innerHTML = cartQuantity();
+        });
+    });
 }
+
+async function loadMenu() {
+    menu = await fetchData(url)
+    displayMenu(menu)
+}
+
+loadMenu();
+export default menu
+
