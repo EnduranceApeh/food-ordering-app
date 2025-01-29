@@ -15,6 +15,7 @@
     
     <script type="module" src="/src/js/main.js" defer></script>
     <script type="module" src="/src/js/menu.js" defer></script>
+    <script type="module" src="/src/data/cart.js" defer></script>
     
    
     
@@ -39,35 +40,11 @@
     <aside>
         <div class="cartTab js-cart-tab">
            <div class="title-close-tab">
-            <h1 class="cart-title">Your Cart(<span class="cartQauntity"></span>)</h1>
+            <h1 class="cart-title">Your Cart(<span class="cartQauntity js-quantity"></span>)</h1>
             <span class="close-tab js-close-tab"><i class="fa-solid fa-xmark"></i></span>
            </div>
-            <div class="listCart">
-                <div class="cart-items-info">
-                    <div class="image">
-                       <img class="cartItem-img" src="/public/images/drinks/bottle-water.jpg" alt="" />
-                    </div>
-
-                    <div class="details">
-                        <span class="name">Gaot and Ewedu</span>
-                        
-                        <div class="update-quantity">
-                            <span class="price">4.00</span>
-                            <div class="delete">
-                                <i class="fa-regular fa-trash-can delete-icon"></i>
-                            </div>
-                            <div class="add-min-quantity">
-                                <span class="minus">
-                                    <i class="fa-solid fa-minus"></i>
-                                </span>
-                                <div>1</div>
-                                <span>
-                                    <i class="fa-solid fa-plus"></i>
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class="listCart js-cart-list">
+                
             </div>
 
             <div class="checkout">

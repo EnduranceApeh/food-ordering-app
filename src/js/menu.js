@@ -1,5 +1,6 @@
-import { addTocart, cartQuantity } from "../data/cart.js";
+import { addTocart, cartQuantity, renderCartUI } from "../data/cart.js";
 import { fetchData } from "./main.js";
+
 
 let menu = {};
 const url = '/src/data/menu.json';
@@ -32,20 +33,28 @@ function displayMenu(menu) {
     // Log the menu to verify
     console.log(`Rendered menu:`, menu);
     // Add to cart functionality
-    document.querySelectorAll('.js-add-to-cart-icon').forEach((button) => {
+    document.querySelectorAll('.js-add-to-cart-icon')
+        .forEach((button) => {
         button.addEventListener('click', () => {
             const itemId = button.dataset.itemId;
             addTocart(itemId);
-            document.querySelector('.js-cart-count').innerHTML = cartQuantity();
+            document.querySelector('.js-cart-count')
+                .innerHTML = cartQuantity();
+            renderCartUI()
         });
     });
 }
 
 async function loadMenu() {
-    menu = await fetchData(url)
-    displayMenu(menu)
+    try{
+        menu = await fetchData(url)
+        displayMenu(menu)
+    } catch(error) {
+        console.log(error)
+    }
 }
 
 loadMenu();
-export default menu
+
+
 
