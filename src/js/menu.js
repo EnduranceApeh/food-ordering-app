@@ -1,6 +1,6 @@
 import { addTocart, cartQuantity, renderCartUI } from "../data/cart.js";
 import { fetchData } from "./main.js";
-
+import { convertToNaira } from "./utility.js";
 
 let menu = {};
 const url = '/src/data/menu.json';
@@ -16,13 +16,13 @@ function displayMenu(menu) {
           <div class="menu-card">
           <div>
               <img class="menu-card-img" src="${item.image}" alt="">
-              <span class="add-to-cart-icon js-add-to-cart-icon" data-item-id="${item.id}"><i class="fa-solid fa-plus"></i></span>
           </div>
           <div>
               <a href="#">
                   <p class="name">${item.name}</p>
               </a>
-              <p class="price">${item.price}</p>
+              <p class="price">₦${convertToNaira(item.price)}</p>
+              <button class="add-to-cart-btn js-add-to-cart-icon" data-item-id="${item.id}">Add to cart<span><i class="fa-solid fa-cart-shopping"></i></span></button>
           </div>
           </div>
           `;

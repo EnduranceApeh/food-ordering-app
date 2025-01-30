@@ -1,0 +1,67 @@
+body { 
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    text-align: center;
+}
+.btn { 
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.btn:hover {
+     background-color: #218838;
+    }
+        
+/* Modal Styles */
+.modal {
+    visibility: hidden;
+    opacity: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: visibility 0s, opacity 0.5s ease-in-out;
+}
+
+/* Active State */
+.modal-bg-active {
+    visibility: visible;
+    opacity: 1;
+}
+
+.modal-content { 
+    display: flex;
+    flex-direction: column;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 400px;
+    
+    text-align: left;
+    gap: 30px;
+}
+.modal-close-btn {
+    background: red;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    float: right;
+    cursor: pointer;
+}
+.order-item {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+.total {
+    font-weight: bold;
+    margin-top: 10px;
+}

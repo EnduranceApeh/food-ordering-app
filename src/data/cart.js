@@ -1,8 +1,10 @@
 import { fetchData } from "../js/main.js";
+import { convertToNaira } from "../js/utility.js";
 
 const menu = await fetchData('/src/data/menu.json')
 const cartList = document.querySelector('.js-cart-list');
-
+let matchingItems;
+let totalCost;
 // get cart items from local storage
 export let cart = JSON.parse(localStorage.getItem('cart')) || [];
 renderCartUI()
@@ -76,14 +78,21 @@ if(closeTab){
     })
 }
 
+// calculate total price of item in cart
+function totalPrice() {
+    const totalPrice = matchingItems.reduce((count, item) => count + parseInt(item.price, 10), 0)
+    console.log(typeof totalPrice)
+    return totalPrice;
+}
 
 // render cart UI
  export function renderCartUI() {'  '
-    let matchingItems = cart.reduce((result, cartItem) => {
+     matchingItems = cart.reduce((result, cartItem) => {
         Object.keys(menu).forEach((category) => {
             const matches = menu[category]
                 .find((item) => item.id === cartItem.itemId)
             if(matches) {
+                matches["quantity"] = cartItem.quantity
                 result.push(matches);
             }
             
@@ -103,7 +112,7 @@ if(closeTab){
             <span class="name">${item.name}</span>
             
             <div class="update-quantity">
-                <span class="price">${item.price}</span>
+            <span class="price js-price">₦${convertToNaira(item.price)}</span>
                 <div class="delete js-delete-item" data-item-id = ${item.id}>
                     <i class="fa-regular fa-trash-can delete-icon"></i>
                 </div>
@@ -111,7 +120,7 @@ if(closeTab){
                     <span class="minus js-minus">
                         <i class="fa-solid fa-minus"></i>
                     </span>
-                    <div class="js-quantity-display">1</div>
+                    <div class="js-quantity-display">${item.quantity}</div>
                     <span class="js-plus">
                         <i class="fa-solid fa-plus"></i>
                     </span>
@@ -133,6 +142,7 @@ deleteIcon.forEach((icon) => {
         renderCartUI()
         console.log(cart)
     })
+
 })
 
 document.querySelector('.js-quantity').innerHTML = cartQuantity()
@@ -171,5 +181,16 @@ document.querySelectorAll('.js-cart-item-info')
         });
 });
 
+totalCost = `₦${convertToNaira(totalPrice())}`;
+document.querySelector('.js-total-cost').innerHTML = totalCost;
 }
+
+export {matchingItems, totalCost}
+/*document.getElementById('checkout').addEventListener('click', () => {
+    openModal()
+})
+*/
+
+
+
 

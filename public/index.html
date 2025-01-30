@@ -12,13 +12,12 @@
 
     <link rel="stylesheet" href="/src/css/header.css" />
     <link rel="stylesheet" href="/src/css/style.css" />
-    
+    <link rel="stylesheet" href="/src/css/order-summary.css" />
+
     <script type="module" src="/src/js/main.js" defer></script>
     <script type="module" src="/src/js/menu.js" defer></script>
     <script type="module" src="/src/data/cart.js" defer></script>
-    
-   
-    
+    <script type="module" src="/src/js/order-summary.js" defer></script>
 </head>
 <body>
     <div id="header"></div>
@@ -36,6 +35,10 @@
                 
             </div>
         </section>
+        <!--Pop Up-->
+        <div id="modal-bg" class="modal">
+                
+        </div>
     </main>
     <aside>
         <div class="cartTab js-cart-tab">
@@ -48,8 +51,8 @@
             </div>
 
             <div class="checkout">
-                <p class="total-cost">Total Cost: <span class="total">23.00</span></p>
-                <button>Check out</button>
+                <p class="total-cost">Total Cost: <span class="total js-total-cost">23.00</span></p>
+                <button id="checkout-btn">Check out</button>
             </div>
         </div>
     </aside>
