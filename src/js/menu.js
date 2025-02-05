@@ -17,7 +17,7 @@ function displayMenu(menu) {
           <div>
               <img class="menu-card-img" src="${item.image}" alt="">
           </div>
-          <div>
+          <div class="menu-detail">
               <a href="#">
                   <p class="name">${item.name}</p>
               </a>
@@ -55,6 +55,3 @@ async function loadMenu() {
 }
 
 loadMenu();
-
-
-

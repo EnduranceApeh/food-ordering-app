@@ -5,7 +5,10 @@ const checkoutBtn = document.querySelector('#checkout-btn');
 const modalBg = document.querySelector("#modal-bg");
 const modalCloseBtn = document.querySelector('.modal-close-btn')
 
+
 checkoutBtn.addEventListener('click', () => {
+    document.querySelector('.js-cart-tab')
+            .classList.remove('show-cart-tab')
    modalBg.classList.add('modal-bg-active')
    loadOrderSummary()
 })

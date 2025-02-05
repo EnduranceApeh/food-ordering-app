@@ -61,7 +61,7 @@ body {
     justify-content: space-between;
     margin: 10px 0;
 }
-.total {
+.summary-total {
     font-weight: bold;
     margin-top: 10px;
 }

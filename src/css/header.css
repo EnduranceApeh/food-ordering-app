@@ -18,7 +18,9 @@ header {
     right: 0;
     left: 0;
 }
-
+.menu-toggle{
+    display: none;
+}
 .logo h2 {
     font-family: Barlow;
     font-size: 24px;
@@ -32,7 +34,7 @@ header {
 /* Search Bar Styles */
 .search-bar {
     display: flex;
-    flex: 1; /* Push to occupy space between logo and nav */
+    flex: 1;
     justify-content: center;
     margin: 0 20px;
 }
@@ -122,4 +124,45 @@ nav ul li a:hover {
     align-items: center;
     justify-content: center;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 420px) {
+    header{
+        justify-content: center;
+        align-items: center;
+        padding: 50px 10px;
+    }
+    nav{
+        display: none;
+    }
+    .search-container {
+        width: 460px;
+        justify-content: center;
+    }
+    .menu-toggle{
+        display: block;
+        font-size: 1.5rem;
+        border: none;
+        position: relative;
+        top: -28px;
+    }
+    .search-bar {
+        height: 53px;
+        width: 88%;
+        position: absolute;
+        bottom: 10px;
+
+      }
+    .logo h2{
+        font-size: 2rem;
+        position: relative;
+        top: -30px;
+        margin-left: 10px;;
+    }
+    .cart{
+        position: relative;
+        top: -30px;
+        font-size: 1.5rem;
+        margin-left: 195px;
+    }
 }
