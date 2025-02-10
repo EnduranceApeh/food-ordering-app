@@ -1,7 +1,7 @@
 import { fetchData } from "../js/main.js";
 import { convertToNaira } from "../js/utility.js";
 
-const menu = await fetchData('/src/data/menu.json')
+const menu = await fetchData('../src/data/menu.json')
 const cartList = document.querySelector('.js-cart-list');
 let matchingItems;
 let totalCost;

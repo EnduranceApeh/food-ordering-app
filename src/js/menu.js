@@ -3,7 +3,7 @@ import { fetchData } from "./main.js";
 import { convertToNaira } from "./utility.js";
 
 let menu = {};
-const url = '/src/data/menu.json';
+const url = '../src/data/menu.json';
 
 const itemsToShow = 4; // Number of items to display initially
 let isExpanded = false; // Track if "View More" is clicked
