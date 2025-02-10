@@ -31,7 +31,7 @@ async function loadComponent(file, elementId) {
 }
 
 // load header and footer to page
-loadComponent('/src/components/header.html', 'header');
+loadComponent('../components/header.html', 'header');
 
-loadComponent('/src/components/order-summary.html', 'modal-bg');
-loadComponent('/src/components/footer.html', 'footer');
+loadComponent('../components/order-summary.html', 'modal-bg');
+loadComponent('../components/footer.html', 'footer');
