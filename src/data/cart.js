@@ -110,9 +110,9 @@ function totalPrice() {
     
         <div class="details">
             <span class="name">${item.name}</span>
-            
-            <div class="update-quantity">
             <span class="price js-price">₦${convertToNaira(item.price)}</span>
+            <div class="update-quantity">
+            
                 <div class="delete js-delete-item" data-item-id = ${item.id}>
                     <i class="fa-regular fa-trash-can delete-icon"></i>
                 </div>

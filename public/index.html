@@ -8,7 +8,11 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Dancing+Script:wght@400..700&family=Lobster&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Caveat:wght@400..700&family=Dancing+Script:wght@400..700&family=Lobster&display=swap" rel="stylesheet">
+
 
     <link rel="stylesheet" href="/src/css/header.css" />
     <link rel="stylesheet" href="/src/css/style.css" />
@@ -21,22 +25,30 @@
 </head>
 <body>
     <div id="header"></div>
-    <section class="hero-section">
-        
-    </section>
+    
     <main>
-        <div class="hero"></div>
+        <section class="hero-section">
+            <div class="hero-content">
+                <h3>Welcome to foodie.</h3>
+                <h1 class="hero-text">Food & Drinks</h1>
+                <p>Satisfy your hunger with just a few clicks! Explore a variety of mouth-watering meals and refreshing drinks, all available for fast and secure ordering.</p>
+                <a href="#menu-section"><button class="hero-btn">Order now</button></a>
+            </div>
+           
+        </section>
+        
 
         <section id="menu-section">
             <div class="categories">
-                <button>all</button>
-                <button>food</button>
-                <button>drinks</button>
+                <h3 class="menu-text">Menu</h3>
             </div>
 
             <div class="menu js-menu">
                 
             </div>
+           <div class="show-all">
+            <button class="view-more-btn" id="viewMoreBtn">View all</button>
+           </div>
         </section>
         <!--Pop Up-->
         <div id="modal-bg" class="modal">

@@ -17,14 +17,17 @@ header {
     top: 0;
     right: 0;
     left: 0;
+    font-family: "Barlow", serif;
+    font-weight: 100;
+    font-style: normal;
 }
 .menu-toggle{
     display: none;
 }
 .logo h2 {
-    font-family: Barlow;
+    font-family: "Barlow", serif;
     font-size: 24px;
-    font-weight: bold;
+    font-weight: 400;
 }
 
 .logo .orange-text {
@@ -126,7 +129,7 @@ nav ul li a:hover {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-@media (max-width: 420px) {
+@media (max-width: 428px) {
     header{
         justify-content: center;
         align-items: center;
@@ -163,6 +166,6 @@ nav ul li a:hover {
         position: relative;
         top: -30px;
         font-size: 1.5rem;
-        margin-left: 195px;
+        margin-left: 160px;
     }
 }
