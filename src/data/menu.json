@@ -3,91 +3,91 @@
         "food": [
             {
                 "id": "1",
-                "image": "/doc/images/food/amala-and-ewedu.png",
+                "image": "/docs/images/food/amala-and-ewedu.png",
                 "name": "Amala and Ewedu",
                 "description": "Soft yam flour meal served with a rich and flavorful Egusi soup.",
                 "price": "400000"
             },
             {
                 "id": "2",
-                "image": "/doc/images/food/amala-egusi-stew.png",
+                "image": "/docs/images/food/amala-egusi-stew.png",
                 "name": "Amala, Egusi and Stew",
                 "description": "A perfect combination of yam flour meal, Egusi soup, and savory stew.",
                 "price": "500000"
             },
             {
                 "id": "3",
-                "image": "/doc/images/food/eba-and-egusi.png",
+                "image": "/docs/images/food/eba-and-egusi.png",
                 "name": "Eba and Egusi",
                 "description": "Cassava-based meal paired with a delightful Egusi soup.",
                 "price": "300000"
             },
             {
                 "id": "5",
-                "image": "/doc/images/food/fufu-and-egusi.png",
+                "image": "/docs/images/food/fufu-and-egusi.png",
                 "name": "Fufu and Egusi",
                 "description": "Fermented cassava meal served with thick, nutty Egusi soup.",
                 "price": "400000"
             },
             {
                 "id": "6",
-                "image": "/doc/images/food/amala-and-ewedu.png",
+                "image": "/docs/images/food/amala-and-ewedu.png",
                 "name": "Amala, Ewedu and Stew",
                 "description": "Yam flour meal served with jute leaves soup and a savory tomato-based stew.",
                 "price": "300000"
             },
             {
                 "id": "7",
-                "image": "/doc/images/food/beans-plantain.png",
+                "image": "/docs/images/food/beans-plantain.png",
                 "name": "Beans and Plantain",
                 "description": "Slow-cooked beans with caramelized fried plantains on the side.",
                 "price": "200000"
             },
             {
                 "id": "8",
-                "image": "/doc/images/food/friedPlantain.png",
+                "image": "/docs/images/food/friedPlantain.png",
                 "name": "Fried Plantain",
                 "description": "Sweet and crispy fried plantain slices, perfect as a snack or side dish.",
                 "price": "100000"
             },
             {
                 "id": "9",
-                "image": "/doc/images/food/spegatti.png",
+                "image": "/docs/images/food/spegatti.png",
                 "name": "Spaghetti",
                 "description": "Well-seasoned pasta served with a savory tomato sauce.",
                 "price": "400000"
             },
             {
                 "id": "10",
-                "image": "/doc/images/food/jollofrice-fish-egg-salad.png",
+                "image": "/docs/images/food/jollofrice-fish-egg-salad.png",
                 "name": "Jollof Rice, Fish, Egg, and Salad",
                 "description": "Classic jollof rice served with grilled fish, boiled egg, and a fresh side salad.",
                 "price": "600000"
             },
             {
                 "id": "11",
-                "image": "/doc/images/food/jollofrice-chicken-plantain.png",
+                "image": "/docs/images/food/jollofrice-chicken-plantain.png",
                 "name": "Jollof Rice, Chicken, and Plantain",
                 "description": "A delicious mix of jollof rice, tender chicken, and fried plantain slices.",
                 "price": "600000"
             },
             {
                 "id": "12",
-                "image": "/doc/images/food/chicken-peppersoup.png",
+                "image": "/docs/images/food/chicken-peppersoup.png",
                 "name": "Chicken Pepper Soup",
                 "description": "Spicy and flavorful chicken soup with aromatic herbs and spices.",
                 "price": "500000"
             },
             {
                 "id": "13",
-                "image": "/doc/images/food/ugali-with-goatmeat.png",
+                "image": "/docs/images/food/ugali-with-goatmeat.png",
                 "name": "Ugali with Goat",
                 "description": "Soft maize meal paired with tender goat meat and gravy.",
                 "price": "400000"
             },
             {
                 "id": "14",
-                "image": "/doc/images/food/goat-peppersoup.png",
+                "image": "/docs/images/food/goat-peppersoup.png",
                 "name": "Goat Pepper Soup",
                 "description": "A hearty, spicy soup made with tender goat meat and fragrant spices.",
                 "price": "400000"
@@ -96,49 +96,49 @@
         "drinks": [
             {
                 "id": "15",
-                "image": "/doc/images/drinks/bottle-water.png",
+                "image": "/docs/images/drinks/bottle-water.png",
                 "name": "Bottle Water",
                 "description": "Refreshing bottled water to quench your thirst.",
                 "price": "40000"
             },
             {
                 "id": "16",
-                "image": "/doc/images/drinks/orange-juice.png",
+                "image": "/docs/images/drinks/orange-juice.png",
                 "name": "Orange Juice",
                 "description": "Freshly squeezed orange juice with a burst of citrus flavor.",
                 "price": "300000"
             },
             {
                 "id": "17",
-                "image": "/doc/images/drinks/sprite.png",
+                "image": "/docs/images/drinks/sprite.png",
                 "name": "Sprite",
                 "description": "Cool and refreshing lemon-lime soda.",
                 "price": "50000"
             },
             {
                 "id": "18",
-                "image": "/doc/images/drinks/strewberry-juice.png",
+                "image": "/docs/images/drinks/strewberry-juice.png",
                 "name": "Strawberry Juice",
                 "description": "Sweet and tangy strawberry-flavored juice.",
                 "price": "200000"
             },
             {
                 "id": "19",
-                "image": "/doc/images/drinks/zobo.png",
+                "image": "/docs/images/drinks/zobo.png",
                 "name": "Zobo",
                 "description": "Hibiscus drink with a blend of spices for a refreshing taste.",
                 "price": "30000"
             },
             {
                 "id": "20",
-                "image": "/doc/images/drinks/coca-cola.png",
+                "image": "/docs/images/drinks/coca-cola.png",
                 "name": "Coca-Cola",
                 "description": "Classic cola-flavored soda.",
                 "price": "60000"
             },
             {
                 "id": "21",
-                "image": "/doc/images/drinks/orange-fanta-can.png",
+                "image": "/docs/images/drinks/orange-fanta-can.png",
                 "name": "Fanta Orange",
                 "description": "Bright and bubbly orange-flavored soda.",
                 "price": "60000"
