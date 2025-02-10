@@ -25,7 +25,7 @@ main{
   align-items: center;
   justify-content: center;
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
-  url('/public/images/drinks/backgrd.jpg'); /* Ensure correct image path */
+  url('/doc/images/drinks/backgrd.jpg'); /* Ensure correct image path */
   background-repeat: no-repeat;
   background-position: center; 
   background-size: cover; 
