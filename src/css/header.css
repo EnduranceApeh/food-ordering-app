@@ -148,6 +148,8 @@ nav ul li a:hover {
         border: none;
         position: relative;
         top: -28px;
+        color: #000;
+        background-color: #fff;
     }
     .search-bar {
         height: 53px;
