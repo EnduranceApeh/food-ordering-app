@@ -5,8 +5,8 @@ import { convertToNaira } from "./utility.js";
 let menu = {};
 const url = '../src/data/menu.json';
 
-const itemsToShow = 4; // Number of items to display initially
-let isExpanded = false; // Track if "View More" is clicked
+const itemsToShow = 4;
+let isExpanded = false;
 
 async function loadMenu() {
     try {
@@ -17,18 +17,18 @@ async function loadMenu() {
     }
 }
 
-
-
 function displayMenu(menu) {
     let html = '';
-    let totalItems = 0; 
+    let totalItems = 0;
 
     Object.keys(menu).forEach(category => {
+        if (!Array.isArray(menu[category])) return; // Ensure it's an array
+
         menu[category].forEach((item, index) => {
             totalItems++;
 
             // Add a "hidden-item" class if index >= itemsToShow
-            const hiddenClass = index > itemsToShow ? "hidden-item" : "";
+            const hiddenClass = index >= itemsToShow ? "hidden-item" : "";
 
             html += `
               <div class="menu-card ${hiddenClass}">
@@ -70,25 +70,50 @@ function displayMenu(menu) {
     }
 }
 
+function handleSearch() {
+    const searchInput = document.querySelector(".search-input");
+    console.log(searchInput)
+    if (!searchInput) return; 
+
+    const query = searchInput.value.toLowerCase();
+    console.log(query)
+    let filteredMenu = {};
+
+    Object.keys(menu).forEach(category => {
+        if (!Array.isArray(menu[category])) return;
+
+        const filteredItems = menu[category].filter(item =>
+            item.name.toLowerCase().includes(query)
+        );
+
+        if (filteredItems.length > 0) {
+            filteredMenu[category] = filteredItems;
+        }
+    });
+
+    displayMenu(filteredMenu);
+}
+
 function toggleViewMore() {
     const hiddenItems = document.querySelectorAll(".hidden-item");
     const viewMoreBtn = document.getElementById("viewMoreBtn");
 
     if (!isExpanded) {
-        // Show all items
-        console.log(hiddenItems)
         hiddenItems.forEach(item => item.classList.remove("hidden-item"));
         viewMoreBtn.textContent = "View Less";
     } else {
-        // Hide the extra items again
         hiddenItems.forEach(item => item.classList.add("hidden-item"));
         viewMoreBtn.textContent = "View all";
-        loadMenu()
-        console.log(hiddenItems)
+        displayMenu(menu); // Ensure full menu is reloaded
     }
 
-    isExpanded = !isExpanded; // Toggle state
+    isExpanded = !isExpanded;
+}
+
+// Add event listener to Search Input
+const searchInput = document.querySelector(".search-input");
+if (searchInput) {
+    searchInput.addEventListener("input", handleSearch);
 }
 
 loadMenu();
- 
