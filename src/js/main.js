@@ -24,4 +24,3 @@ async function loadComponent(file, elementId) {
 loadComponent('./src/components/header.html', 'header');
 
 loadComponent('./src/components/order-summary.html', 'modal-bg');
-loadComponent('../components/footer.html', 'footer');
