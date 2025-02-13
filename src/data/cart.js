@@ -155,36 +155,39 @@ document.querySelectorAll('.js-cart-item-info')
         const itemID = cartItemInfo.dataset.itemId;
         const plus = cartItemInfo.querySelector('.js-plus'); 
         const minus = cartItemInfo.querySelector('.js-minus'); 
-        const quantityDisplay = cartItemInfo
-            .querySelector('.js-quantity-display');
+        const quantityDisplay = cartItemInfo.querySelector('.js-quantity-display');
+        const priceDisplay = cartItemInfo.querySelector('.js-price');
 
         let currentQuantity = parseInt(quantityDisplay.textContent, 10);
-        console.log(`currentQuantity ${currentQuantity}` );
+        let item = matchingItems.find((item) => item.id == itemID);
         
         minus.addEventListener('click', () => {
             if (currentQuantity > 1) {
                 currentQuantity--;
                 quantityDisplay.innerHTML = currentQuantity;
                 updateCartQuantity(itemID, currentQuantity);
-                document.querySelector('.js-quantity')
-                    .innerHTML = cartQuantity();
-                document.querySelector('.js-cart-count').innerHTML = cartQuantity()
             } else {
                 removeFromCart(itemID);
                 renderCartUI();
             }
+            updatePrice();
         });
 
         plus.addEventListener('click', () => {
             currentQuantity++;
             quantityDisplay.innerHTML = currentQuantity;
             updateCartQuantity(itemID, currentQuantity);
-            document.querySelector('.js-quantity')
-                .innerHTML = cartQuantity();
-            document.querySelector('.js-cart-count').innerHTML = cartQuantity()
-            console.log(cart)
+            updatePrice();
         });
+
+        function updatePrice() {
+            item.quantity = currentQuantity;
+            priceDisplay.innerHTML = `₦${convertToNaira(item.price * currentQuantity)}`;
+            document.querySelector('.js-total-cost').innerHTML = `₦${convertToNaira(totalPrice())}`;
+            document.querySelector('.js-cart-count').innerHTML = cartQuantity();
+        }
 });
+
 
 totalCost = `₦${convertToNaira(totalPrice())}`;
 document.querySelector('.js-total-cost').innerHTML = totalCost;
