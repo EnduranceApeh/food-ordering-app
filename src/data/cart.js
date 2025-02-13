@@ -12,7 +12,7 @@ renderCartUI()
 console.log(cart)
 const showCartTab = document.querySelector('.js-show-cart-tab')
 const closeTab = document.querySelector('.js-close-tab')
-
+document.querySelector('.js-cart-count').innerHTML = cartQuantity();
 // Save to local storage
 function saveTOLocalStorage() {
     localStorage.setItem('cart', JSON.stringify(cart));
@@ -60,6 +60,7 @@ function updateCartQuantity(itemID, newQuantity) {
         item.quantity = newQuantity;
     }
     console.log('new quantity' + item.quantity)
+    return item.quantity
 }
 
 
@@ -140,6 +141,7 @@ deleteIcon.forEach((icon) => {
     icon.addEventListener('click', () => {
         removeFromCart(itemId);
         renderCartUI()
+        document.querySelector('.js-cart-count').innerHTML = cartQuantity()
         console.log(cart)
     })
 
@@ -166,6 +168,7 @@ document.querySelectorAll('.js-cart-item-info')
                 updateCartQuantity(itemID, currentQuantity);
                 document.querySelector('.js-quantity')
                     .innerHTML = cartQuantity();
+                document.querySelector('.js-cart-count').innerHTML = cartQuantity()
             } else {
                 removeFromCart(itemID);
                 renderCartUI();
@@ -178,6 +181,8 @@ document.querySelectorAll('.js-cart-item-info')
             updateCartQuantity(itemID, currentQuantity);
             document.querySelector('.js-quantity')
                 .innerHTML = cartQuantity();
+            document.querySelector('.js-cart-count').innerHTML = cartQuantity()
+            console.log(cart)
         });
 });
 
