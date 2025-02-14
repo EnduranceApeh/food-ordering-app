@@ -58,6 +58,7 @@ function updateCartQuantity(itemID, newQuantity) {
     let item = cart.find((item) => item.itemId === itemID);
     if(item) {
         item.quantity = newQuantity;
+        saveTOLocalStorage()
     }
     console.log('new quantity' + item.quantity)
     return item.quantity
@@ -81,9 +82,12 @@ if(closeTab){
 
 // calculate total price of item in cart
 function totalPrice() {
-    const totalPrice = matchingItems.reduce((count, item) => count + parseInt(item.price, 10), 0)
-    console.log(typeof totalPrice)
-    return totalPrice;
+    return cart.reduce((total, cartItem) => {
+        const menuItem = Object.values(menu)
+            .flat() // Flatten all categories into one array
+            .find(item => item.id === cartItem.itemId);
+        return total + (menuItem ? menuItem.price * cartItem.quantity : 0);
+    }, 0);
 }
 
 // render cart UI
@@ -178,6 +182,7 @@ document.querySelectorAll('.js-cart-item-info')
             quantityDisplay.innerHTML = currentQuantity;
             updateCartQuantity(itemID, currentQuantity);
             updatePrice();
+            
         });
 
         function updatePrice() {
@@ -185,6 +190,7 @@ document.querySelectorAll('.js-cart-item-info')
             priceDisplay.innerHTML = `₦${convertToNaira(item.price * currentQuantity)}`;
             document.querySelector('.js-total-cost').innerHTML = `₦${convertToNaira(totalPrice())}`;
             document.querySelector('.js-cart-count').innerHTML = cartQuantity();
+            document.querySelector('.js-quantity').innerHTML = cartQuantity()
         }
 });
 
