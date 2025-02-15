@@ -40,6 +40,7 @@ function displayMenu(menu) {
                           <p class="name">${item.name}</p>
                       </a>
                       <p class="price">₦${convertToNaira(item.price)}</p>
+                      <p class="message js-message-${item.id}"></p>
                       <button class="add-to-cart-btn js-add-to-cart-icon" data-item-id="${item.id}">
                           Add to cart<span><i class="fa-solid fa-cart-shopping"></i></span>
                       </button>
@@ -93,7 +94,15 @@ function handleSearch() {
 
     displayMenu(filteredMenu);
 }
-
+export function displayMessage(itemId) {
+    const message = document.querySelector(`.js-message-${itemId}`)
+    if(message) {
+        message.innerHTML = "added"
+    }
+    setTimeout(() => {
+        message.innerHTML = ""
+    }, 2000)
+}
 function toggleViewMore() {
     const hiddenItems = document.querySelectorAll(".hidden-item");
     const viewMoreBtn = document.getElementById("viewMoreBtn");
@@ -115,5 +124,6 @@ const searchInput = document.querySelector(".search-input");
 if (searchInput) {
     searchInput.addEventListener("input", handleSearch);
 }
+
 
 loadMenu();

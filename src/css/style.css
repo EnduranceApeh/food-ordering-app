@@ -180,6 +180,16 @@ main{
   color: #888;
   margin: 0;
 }
+.message{
+  display: block;
+  color: orange;
+  margin-top: 10px;
+  opacity: 1;
+}
+
+.hide-message{
+  opacity: 0;
+}
 
 .menu-card .name:hover {
   color: orange;

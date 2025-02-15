@@ -1,5 +1,6 @@
 import { fetchData } from "../js/main.js";
 import { convertToNaira } from "../js/utility.js";
+import { displayMessage } from "../js/menu.js";
 
 const menu = await fetchData('../src/data/menu.json')
 const cartList = document.querySelector('.js-cart-list');
@@ -20,6 +21,7 @@ function saveTOLocalStorage() {
 
 // Add to cart function
 export function addTocart(itemId) {
+    
     let matchingItem;
             cart.forEach((item) => {
                 if(item.itemId === itemId) {
@@ -35,6 +37,7 @@ export function addTocart(itemId) {
                     quantity: 1
                 })
             }
+            displayMessage(itemId)
             saveTOLocalStorage();
             renderCartUI()
             console.log(cart)
